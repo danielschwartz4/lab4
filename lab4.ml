@@ -53,7 +53,7 @@ the function `curry`.
 let curry = fun _ -> failwith "curry not implemented" ;;
 
 (*......................................................................
-Exercise 2: Now implement the function polymorphic higher-order function
+Exercise 2: Now implement the polymorphic higher-order function
 `uncurry`, which takes as its argument a curried function and returns
 the uncurried version of its argument function.  You may want to go
 through the same 7-step process to get started.
@@ -167,15 +167,18 @@ Part 3: Polymorphism practice
 Exercise 9: Do you see a pattern in your implementations of `min_option`
 and `plus_option`? How can we factor out similar code?
 
-Write a polymorphic higher-order function `calc_option` to extend binary
-operations to operate on option type values, taking three arguments in
-order: the binary operation (a curried function) and its first and
-second argument. If both arguments are `None`, return `None`.  If one
-argument is `None`, the function should return the other argument. If
-neither argument is `None`, the binary operation should be applied to
-the argument values and the result appropriately returned.
+Write a polymorphic higher-order function `calc_option` to extend
+binary operations to operate on option type values, taking three
+arguments in order: the binary operation (a curried function) and its
+first and second arguments as option types. If both arguments are
+`None`, return `None`.  If one argument is `None`, the function should
+return the other argument. If neither argument is `None`, the binary
+operation should be applied to the argument values and the result
+appropriately returned.
 
-What is the type signature for `calc_option`?
+What is the type signature for `calc_option`? (If you're having
+trouble figuring that out, call over a staff member, or check our
+intended type at https://url.cs51.io/lab4-1.)
 
 Now implement `calc_option`.
 ......................................................................*)
