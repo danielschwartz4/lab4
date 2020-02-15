@@ -336,7 +336,8 @@ the version we provided above at the top of Part 4.
 ......................................................................*)
 
 let dotprod (a : int list) (b : int list) : int option =
-maybe (fun pairs -> sum (prods pairs)) (zip_opt a b) ;;
+  maybe (fun pairs -> sum (prods pairs))
+    (zip_opt a b) ;;
 
 (*......................................................................
 Exercise 15: Reimplement `zip_opt` along the same lines, as `zip_opt_2`
